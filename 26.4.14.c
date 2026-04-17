@@ -33,6 +33,7 @@ void ListInsert(SeqList *L,int i,int e){
 int main(){
 	SeqList L;
 	InitList(&L);
+	printf("MaxSize=%d\n",L.MaxSize);
 	IncreaseSize(&L,5);
 	printf("MaxSize=%d\n",L.MaxSize);
 	return 0;
