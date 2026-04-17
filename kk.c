@@ -34,5 +34,6 @@ int main(){
     SequenceList L;
     InitialList(&L);
     IncreaseList(&L,5);
+    printf("MaxSize=%d\n",L.MaxSize);
     return 0;
 }
