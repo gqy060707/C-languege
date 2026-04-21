@@ -39,17 +39,17 @@ void IncreaseList(SequenceList *L, int AddSize) // 增加顺序表的长度
     if (L->data == NULL)
     {
         printf("增加内存分配失败！\n");
-        exit(1);}
+        exit(1);
+    }
 
-        for (int i = 0; i < L->length; i++)
-        { // 将原来顺序表中的元素复制到新的顺序表中
-            L->data[i] = olddata[i];
-        }
-        L->MaxSize += AddSize;
-      
-        free(olddata);         // 释放原来顺序表的内存空间
-        printf("增加内存分配成功！\n");
-    
+    for (int i = 0; i < L->length; i++)
+    { // 将原来顺序表中的元素复制到新的顺序表中
+        L->data[i] = olddata[i];
+    }
+    L->MaxSize += AddSize;
+
+    free(olddata); // 释放原来顺序表的内存空间
+    printf("增加内存分配成功！\n");
 }
 
 void PrintList(SequenceList *L)
@@ -76,6 +76,6 @@ int main()
     IncreaseList(&L, AddSize); // 增加顺序表L的长度 ,&L表示顺序表的地址
     printf("增加顺序表长度完成！\n");
     PrintList(&L); // 打印顺序表中的元素
-    free(L.data); // 释放顺序表的内存空间
+    free(L.data);  // 释放顺序表的内存空间
     return 0;
 }
