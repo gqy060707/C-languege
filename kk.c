@@ -36,10 +36,10 @@ void IncreaseList(SequenceList *L, int length)
     L->MaxSize += length; // 更新顺序表的最大长度
     free(p);              // 释放原来顺序表的内存空间
 }
-int main()
-{                        // 主函数
-    SequenceList L;      // 定义顺序表变量L
-    InitialList(&L);     // 初始化顺序表L
-    IncreaseList(&L, 5); // 增加顺序表L的长度为5
+int main(){
+    SequenceList L;
+    InitialList(&L);
+    IncreaseList(&L,5);
+    printf("MaxSize=%d\n",L.MaxSize);
     return 0;
 }
